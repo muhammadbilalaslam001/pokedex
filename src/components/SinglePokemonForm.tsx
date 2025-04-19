@@ -90,7 +90,7 @@ export function SinglePokemonForm() {
           gutterBottom
           sx={{ mb: 4 }}
         >
-          Find a Pokémon
+          Find a Pokemon
         </Typography>
 
         <Box
@@ -99,12 +99,12 @@ export function SinglePokemonForm() {
           sx={{ display: "flex", flexDirection: "column", gap: 3 }}
         >
           <TextField
-            label="Pokémon Name"
+            label="Pokemon Name"
             value={pokemonName}
             onChange={handleInputChange}
             fullWidth
             variant="outlined"
-            helperText="Enter a Pokémon name (e.g., Bulbasaur)"
+            helperText="Enter a Pokemon name (e.g., Bulbasaur)"
             InputProps={{
               endAdornment: pokemonQuery.isFetching && (
                 <CircularProgress size={24} color="inherit" />
@@ -135,7 +135,7 @@ export function SinglePokemonForm() {
           alignItems="center"
         >
           <CircularProgress size={40} thickness={4} />
-          <Typography sx={{ ml: 2 }}>Searching for Pokémon...</Typography>
+          <Typography sx={{ ml: 2 }}>Searching for Pokemon...</Typography>
         </Box>
       )}
 
@@ -151,7 +151,7 @@ export function SinglePokemonForm() {
           }}
         >
           <Typography color="error" variant="body1" fontWeight="medium">
-            {pokemonQuery.error?.message || "Pokémon not found"}
+            {pokemonQuery.error?.message || "Pokemon not found"}
           </Typography>
         </Box>
       )}

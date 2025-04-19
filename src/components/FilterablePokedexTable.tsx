@@ -51,12 +51,12 @@ export function FilterablePokedexTable() {
 
       if (selectedType) {
         if (data.length === 0) {
-          toast.error(`No ${selectedType}-type Pokémon found`);
+          toast.error(`No ${selectedType}-type Pokemon found`);
         } else {
-          toast.success(`Found ${data.length} ${selectedType}-type Pokémon`);
+          toast.success(`Found ${data.length} ${selectedType}-type Pokemon`);
         }
       } else if (prevTypeRef.current !== undefined) {
-        toast.success(`Loaded all ${data.length} Pokémon`);
+        toast.success(`Loaded all ${data.length} Pokemon`);
       }
 
       setUserInitiatedChange(false);
@@ -64,7 +64,7 @@ export function FilterablePokedexTable() {
     }
 
     if (pokemonQuery.error && userInitiatedChange) {
-      toast.error(`Error loading Pokémon: ${pokemonQuery.error.message}`);
+      toast.error(`Error loading Pokemon: ${pokemonQuery.error.message}`);
       setUserInitiatedChange(false);
     }
   }, [
@@ -122,7 +122,7 @@ export function FilterablePokedexTable() {
           gutterBottom
           sx={{ mb: 4 }}
         >
-          Pokédex
+          Pokedex
         </Typography>
 
         <Box sx={{ mb: 4 }}>
@@ -150,7 +150,7 @@ export function FilterablePokedexTable() {
           <Typography sx={{ ml: 2 }}>
             {typesQuery.isLoading || typesQuery.isFetching
               ? "Loading types..."
-              : "Loading Pokémon..."}
+              : "Loading Pokemon..."}
           </Typography>
         </Box>
       )}
@@ -170,7 +170,7 @@ export function FilterablePokedexTable() {
                   mb: 2,
                 }}
               >
-                {pokemonQuery.error?.message || "Failed to load Pokémon"}
+                {pokemonQuery.error?.message || "Failed to load Pokemon"}
               </Alert>
             ) : (
               <>
@@ -199,8 +199,8 @@ export function FilterablePokedexTable() {
                           ? `${
                               selectedType.charAt(0).toUpperCase() +
                               selectedType.slice(1)
-                            }-type Pokémon`
-                          : "All Pokémon"}
+                            }-type Pokemon`
+                          : "All Pokemon"}
                       </Typography>
                       {totalPages > 1 && (
                         <Typography variant="body2" color="text.secondary">
@@ -246,7 +246,7 @@ export function FilterablePokedexTable() {
                     }}
                   >
                     <Typography variant="body1" fontWeight="medium">
-                      No Pokémon found
+                      No Pokemon found
                       {selectedType ? ` with type: ${selectedType}` : ""}
                     </Typography>
                   </Box>

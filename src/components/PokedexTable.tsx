@@ -32,7 +32,7 @@ export function PokedexTable({ pokemon, isLoading, error }: PokedexTableProps) {
         >
           <CircularProgress size={40} thickness={4} />
           <Typography variant="body1" color="text.secondary">
-            Loading Pokémon data...
+            Loading Pokemon data...
           </Typography>
         </Box>
       </Fade>
@@ -73,7 +73,7 @@ export function PokedexTable({ pokemon, isLoading, error }: PokedexTableProps) {
         }}
       >
         <Typography color="text.secondary" variant="body1">
-          No Pokémon found
+          No Pokemon found
         </Typography>
       </Box>
     );

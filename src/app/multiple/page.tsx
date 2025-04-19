@@ -14,7 +14,7 @@ export default function MultiplePage() {
     if (!hasShownToast) {
       const toastId = setTimeout(() => {
         toast.success(
-          "Search for multiple Pokémon by entering comma-separated names!"
+          "Search for multiple Pokemon by entering comma-separated names!"
         );
         sessionStorage.setItem(multipleToastKey, "true");
       }, 1000);

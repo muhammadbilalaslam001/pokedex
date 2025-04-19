@@ -60,7 +60,7 @@ export function MultiplePokemonForm() {
         .filter((name) => name.length > 0);
 
       if (namesArray.length === 0) {
-        toast.error("Please enter at least one Pokémon name");
+        toast.error("Please enter at least one Pokemon name");
         return;
       }
 
@@ -102,7 +102,7 @@ export function MultiplePokemonForm() {
           gutterBottom
           sx={{ mb: 4 }}
         >
-          Find Multiple Pokémon
+          Find Multiple Pokemon
         </Typography>
 
         <Box
@@ -111,12 +111,12 @@ export function MultiplePokemonForm() {
           sx={{ display: "flex", flexDirection: "column", gap: 3 }}
         >
           <TextField
-            label="Pokémon Names"
+            label="Pokemon Names"
             value={pokemonNames}
             onChange={(e) => setPokemonNames(e.target.value)}
             fullWidth
             variant="outlined"
-            helperText="Enter comma-separated Pokémon names (e.g., Bulbasaur, Pikachu, Charmander)"
+            helperText="Enter comma-separated Pokemon names (e.g., Bulbasaur, Pikachu, Charmander)"
             InputProps={{
               endAdornment: pokemonQuery.isFetching && (
                 <CircularProgress size={24} color="inherit" />
@@ -147,7 +147,7 @@ export function MultiplePokemonForm() {
           alignItems="center"
         >
           <CircularProgress size={40} thickness={4} />
-          <Typography sx={{ ml: 2 }}>Searching for Pokémon...</Typography>
+          <Typography sx={{ ml: 2 }}>Searching for Pokemon...</Typography>
         </Box>
       )}
 
@@ -163,7 +163,7 @@ export function MultiplePokemonForm() {
           }}
         >
           <Typography color="error" variant="body1" fontWeight="medium">
-            Error: {pokemonQuery.error?.message || "Failed to fetch Pokémon"}
+            Error: {pokemonQuery.error?.message || "Failed to fetch Pokemon"}
           </Typography>
         </Box>
       )}
@@ -193,7 +193,7 @@ export function MultiplePokemonForm() {
               }}
             >
               <Typography variant="h6" gutterBottom sx={{ mb: 0 }}>
-                Results ({pokemonQuery.data.length} Pokémon):
+                Results ({pokemonQuery.data.length} Pokemon):
               </Typography>
               {totalPages > 1 && (
                 <Typography variant="body2" color="text.secondary">
@@ -239,7 +239,7 @@ export function MultiplePokemonForm() {
             }}
           >
             <Typography variant="body1" fontWeight="medium">
-              No Pokémon found with the given names
+              No Pokemon found with the given names
             </Typography>
           </Box>
         )}

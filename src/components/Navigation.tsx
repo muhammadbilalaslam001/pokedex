@@ -36,9 +36,9 @@ function MenuIcon() {
 }
 
 const navigationItems = [
-  { path: "/", label: "Single Pokémon" },
-  { path: "/multiple", label: "Multiple Pokémon" },
-  { path: "/filterable", label: "Filterable Pokédex" },
+  { path: "/", label: "Single Pokemon" },
+  { path: "/multiple", label: "Multiple Pokemon" },
+  { path: "/filterable", label: "Filterable Pokedex" },
 ];
 
 export function Navigation() {
@@ -97,7 +97,7 @@ export function Navigation() {
                     color: theme.palette.primary.main,
                   }}
                 >
-                  Pokédex
+                  Pokedex
                 </Typography>
               </Box>
               <Menu
